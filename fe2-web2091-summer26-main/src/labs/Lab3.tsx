@@ -4,9 +4,14 @@ import { useState } from "react";
 const { TextArea } = Input;
 const { TabPane } = Tabs;
 
+interface Bai1FormValues {
+  email?: string;
+  password?: string;
+}
+
 // Bài 1: Form đăng nhập đơn giản
 function Bai1L3() {
-  const onFinish = (values: any) => console.log("Bai 1:", values);
+  const onFinish = (values: Bai1FormValues) => console.log("Bai 1:", values);
   return (
     <Form layout="vertical" onFinish={onFinish} style={{ maxWidth: 400 }}>
       <Form.Item label="Email" name="email" rules={[{ required: true, message: "Hãy nhập email" }]}>
@@ -20,9 +25,17 @@ function Bai1L3() {
   );
 }
 
+interface Bai2FormValues {
+  name?: string;
+  phone?: string;
+  email?: string;
+  password?: string;
+  confirm?: string;
+}
+
 // Bài 2: Form đăng ký có xác thực
 function Bai2L3() {
-  const onFinish = (values: any) => console.log("Bai 2:", values);
+  const onFinish = (values: Bai2FormValues) => console.log("Bai 2:", values);
   return (
     <Form layout="vertical" onFinish={onFinish} style={{ maxWidth: 400 }}>
       <Form.Item label="Name" name="name"><Input /></Form.Item>
@@ -49,9 +62,16 @@ function Bai2L3() {
   );
 }
 
+interface Bai3FormValues {
+  name: string;
+  price: number;
+  quantity: number;
+  description: string;
+}
+
 // Bài 3: Form sản phẩm
 function Bai3L3() {
-  const onFinish = (data: any) => console.log("Bai 3:", data);
+  const onFinish = (data: Bai3FormValues) => console.log("Bai 3:", data);
   return (
     <Form onFinish={onFinish} layout="vertical" style={{ maxWidth: 400 }}>
       <Form.Item label="Name" name="name" rules={[{ required: true }]}>
@@ -71,10 +91,18 @@ function Bai3L3() {
   );
 }
 
+interface PostValues {
+  title: string;
+  category: string;
+  slug: string;
+  content: string;
+  image: string;
+}
+
 // Bài 4: Form bài viết có hiển thị kết quả
 function Bai4L3() {
-  const [post, setPost] = useState<any>(null);
-  const onFinish = (values: any) => setPost(values);
+  const [post, setPost] = useState<PostValues | null>(null);
+  const onFinish = (values: PostValues) => setPost(values);
 
   return (
     <div>
