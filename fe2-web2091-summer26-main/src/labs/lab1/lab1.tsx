@@ -10,14 +10,14 @@ function Dashboard() {
   const [users, setUsers] = useState([
     {
       key: 1,
-      name: "tuấn 1",
-      email: "tuan@gmail.com",
+      name: "chau 1",
+      email: "chau@gmail.com",
       role: "Admin",
     },
     {
       key: 2,
-      name: "tuấn 2",
-      email: "tuan@gmail.com",
+      name: "chau 2",
+      email: "chau 2@gmail.com",
       role: "User",
     },
   ]);

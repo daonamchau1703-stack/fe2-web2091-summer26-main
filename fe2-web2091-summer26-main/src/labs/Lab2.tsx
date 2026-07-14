@@ -1,37 +1,66 @@
-import { Image, Table } from "antd";
+import { Button, Space, Table, Tag } from "antd";
 
 function Lab2() {
-  const columns = [
-    {
-      title: "ID",
-      dataIndex: "id",
-    },
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Avatar",
-      dataIndex: "avatar",
-      render: (value: string) => <Image src={value} />,
-    },
+  // b2
+  const productColumns = [
+    { title: "ID", dataIndex: "id" },
+    { title: "Name", dataIndex: "name" },
+    { title: "Price", dataIndex: "price" },
+    { title: "Category", dataIndex: "category" },
   ];
-  const dataSource = [
+
+  const productDataSource = [
+    { id: 1, name: "nam chau", price: "1307đ", category: "vip" },
+    { id: 2, name: "nam chau", price: "1307đđ", category: "vip pro" },
+    { id: 3, name: "nam chau 55", price: "1307đđ", category: "pro max" },
+    { id: 4, name: "nam chau 561651", price: "1307đđ", category: "vip pro max" },
+  ];
+
+  // b3
+  const userColumns = [
+    { title: "ID", dataIndex: "id" },
+    { title: "Name", dataIndex: "name" },
+    { title: "Email", dataIndex: "email" },
     {
-      key: 1,
-      id: 1,
-      name: "hoadv",
-      avatar: "https://i.pravatar.cc/150?img=1",
+      title: "Status",
+      dataIndex: "status",
+      render: (status: string) => (
+        <Tag color={status === "active" ? "green" : "red"}>
+          {status.toUpperCase()}
+        </Tag>
+      ),
     },
     {
-      key: 2,
-      id: 2,
-      name: "hoadv2",
-      avatar: "https://i.pravatar.cc/150?img=2",
+      title: "Action",
+      key: "action",
+      render: () => (
+        <Space size="middle">
+          <Button>Edit</Button>
+          <Button danger>Delete</Button>
+        </Space>
+      ),
     },
   ];
 
-  return <Table columns={columns} dataSource={dataSource} />;
+  const userDataSource = [
+    { id: 1, name: "nam chau", email: "chau@gmail.com", status: "active" },
+    { id: 2, name: "nam chau", email: "chau@gmail.com", status: "inactive" },
+    { id: 3, name: "nam chau", email: "chau@gmail.com", status: "active" },
+
+  ];
+
+  return (
+    <div style={{padding: 24 }}>
+      <Table
+        columns={productColumns}
+        dataSource={productDataSource}
+        rowKey="id"
+        pagination={{ pageSize: 3 }}
+      />
+
+      <Table columns={userColumns} dataSource={userDataSource} rowKey="id" />
+    </div>
+  );
 }
 
 export default Lab2;

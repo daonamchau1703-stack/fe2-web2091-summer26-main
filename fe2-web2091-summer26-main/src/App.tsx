@@ -17,8 +17,8 @@ function App() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="hover:text-gray-200">
-              Trang chủ lap2
+            <Link to="/lab2" className="hover:text-gray-200">
+              lap2
             </Link>
             <Link to="/lab1" className="hover:text-gray-200">
               lab1
@@ -52,6 +52,8 @@ function App() {
 
       <Routes>
         <Route path="/lab1" element={<Lab1 />} />
+        <Route path="/lab2" element={<Lab2 />} />
+        <Route path="/lab3" element={<Lab3 />} />
       </Routes>
       <Toaster />
     </>
