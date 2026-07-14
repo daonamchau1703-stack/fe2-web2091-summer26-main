@@ -1,6 +1,11 @@
 import { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
+import "antd/dist/reset.css";
+import Lab1 from "./labs/lab1/lab1";
+import Lab2 from "./labs/Lab2";
 import Lab3 from "./labs/Lab3";
+
+
 
 function App() {
   return (
@@ -12,11 +17,14 @@ function App() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="#" className="hover:text-gray-200">
-              Trang chủ
+            <Link to="/" className="hover:text-gray-200">
+              Trang chủ lap2
             </Link>
-            <Link to="/list" className="hover:text-gray-200">
-              Danh sách
+            <Link to="/lab1" className="hover:text-gray-200">
+              lab1
+            </Link>
+            <Link to="/lab3" className="hover:text-gray-200">
+              lab3
             </Link>
             <Link to="/add" className="hover:text-gray-200">
               Thêm mới
@@ -24,7 +32,7 @@ function App() {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="#" className="hover:text-gray-200">
+            <Link to="/reg" className="hover:text-gray-200">
               Đăng nhập
             </Link>
             <Link to="#" className="hover:text-gray-200">
@@ -37,9 +45,14 @@ function App() {
       {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
-        <Lab3 />
+        {/* <Lab1 /> */}
+        {/* <Lab2 /> */}
       </div>
 
+
+      <Routes>
+        <Route path="/lab1" element={<Lab1 />} />
+      </Routes>
       <Toaster />
     </>
   );

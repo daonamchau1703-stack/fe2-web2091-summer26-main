@@ -1,7 +1,12 @@
 import { Form, Input, Button, InputNumber } from "antd";
 
+interface Lab3FormValues {
+  title: string;
+  price: number;
+}
+
 function Lab3() {
-  const onFinish = (data: any) => {
+  const onFinish = (data: Lab3FormValues) => {
     console.log(data);
   };
   return (
