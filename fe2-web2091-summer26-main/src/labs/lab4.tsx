@@ -49,7 +49,7 @@ const StoryTable = () => {
     {
       title: "Action",
       render: (_: unknown, record: Story) => (
-        <Button danger onClick={() => deleteMutation.mutate(record.id)}>
+        <Button danger onClick={() => deleteMutation.mutate(+record.id)} >
           Xóa
         </Button>
       ),

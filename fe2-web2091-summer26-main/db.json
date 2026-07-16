@@ -1,12 +1,20 @@
 {
   "stories": [
     {
-      "title": "a",
-      "author": "a",
-      "image": "a",
-      "description": "a",
-      "createdAt": "2026-07-14T11:05:19.898Z",
-      "id": "ABgrgLS"
+  "title": "Naruto",
+  "author": "Masashi Kishimoto",
+  "cover": "https://image.com/naruto.jpg",
+  "description": "Truyện hải tặc"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Văn học"
+    },
+    {
+      "id": 2,
+      "title": "Kinh tế"
     }
   ]
 }

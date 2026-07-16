@@ -5,6 +5,7 @@ import Lab1 from "./labs/lab1/lab1";
 import Lab2 from "./labs/Lab2";
 import Lab3 from "./labs/Lab3";
 import Lab4 from "./labs/lab4";
+import Lab5 from "./labs/lab5";
 
 
 
@@ -29,6 +30,9 @@ function App() {
             </Link>
             <Link to="/lab4" className="hover:text-gray-200">
               lab4
+            </Link>
+            <Link to="/Lab5" className="hover:text-gray-200">
+              lab5
             </Link>
             <Link to="/add" className="hover:text-gray-200">
               Thêm mới
@@ -59,6 +63,7 @@ function App() {
         <Route path="/lab2" element={<Lab2 />} />
         <Route path="/lab3" element={<Lab3 />} />
         <Route path="/lab4" element={<Lab4 />} />
+        <Route path="/Lab5" element={<Lab5 />} />
       </Routes>
       <Toaster />
     </>
