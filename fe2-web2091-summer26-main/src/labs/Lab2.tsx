@@ -44,8 +44,8 @@ function Lab2() {
 
   const userDataSource = [
     { id: 1, name: "nam chau", email: "chau@gmail.com", status: "active" },
-    { id: 2, name: "nam chau", email: "chau@gmail.com", status: "inactive" },
-    { id: 3, name: "nam chau", email: "chau@gmail.com", status: "active" },
+    { id: 2, name: "nam chau1", email: "chau@gmail.com", status: "inactive" },
+    { id: 3, name: "nam chau2", email: "chau@gmail.com", status: "active" },
 
   ];
 
