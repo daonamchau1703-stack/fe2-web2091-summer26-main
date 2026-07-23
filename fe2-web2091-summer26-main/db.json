@@ -1,0 +1,20 @@
+{
+  "stories": [
+    {
+  "title": "Naruto",
+  "author": "Masashi Kishimoto",
+  "cover": "https://image.com/naruto.jpg",
+  "description": "Truyện hải tặc"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Văn học"
+    },
+    {
+      "id": 2,
+      "title": "Kinh tế"
+    }
+  ]
+}
