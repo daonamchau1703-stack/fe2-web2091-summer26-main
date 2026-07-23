@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+<!-- interface Story {
+id: number;
+title: string;
+author: string;
+cover: string;
+}
+
+
+function Lab4() {
+// useQuery
+const { data } = useQuery({
+queryKey: ["stories"],
+queryFn: async () => {
+const res = await axios.get("http://localhost:3000/stories");
+return res.data;
+},
+});
+
+const columns = [
+{ title: "Ten truyen", dataIndex: "title" },
+{ title: "Tac gia", dataIndex: "author" },
+{ title: "Hinh anh", dataIndex: "cover" },
+{
+title: "Actions",
+render: (record: Story) => {
+return (
+<Button danger>
+  <Link to={`/edit/${record.id}`}>Edit</Link>
+</Button>
+);
+},
+},
+];
+
+return (
+<div>
+  Lab4
+  <Table columns={columns} dataSource={data} />
+</div>
+);
+}
+
+export default Lab4; -->
